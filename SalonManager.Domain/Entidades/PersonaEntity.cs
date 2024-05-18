@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SalonManager.Domain.Entidades
+{
+    public class PersonaEntity : BaseEntity
+    {
+        [Required(ErrorMessage = "El nombre es requerido")]
+        [StringLength(100, ErrorMessage = "CustomerName cannot be longer than 100 characters")]
+        public string Nombre { get; set; }
+
+        public string Direccion { get; set; }
+
+        [Required(ErrorMessage = "El email es requerido")]
+        [EmailAddress(ErrorMessage = "Email invalido")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "El telefono es requerido")]
+        public string Telefono { get; set; }
+    }
+}
