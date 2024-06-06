@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SalonManager.Domain.Entidades
 {
-    public class SalonEntity : UsuarioEntity
+    public class SalonEntity : PersonaEntity
     {
         public List<ClienteEntity> Clientes { get; set; }
     }

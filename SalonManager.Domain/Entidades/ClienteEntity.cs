@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SalonManager.Domain.Entidades
 {
-    public class ClienteEntity : UsuarioEntity
+    public class ClienteEntity : PersonaEntity
     {
         [Required(ErrorMessage = "El apellido es requerido")]
         [MaxLength(30, ErrorMessage = "El apellido no puede tener mas de 30 caracteres")]

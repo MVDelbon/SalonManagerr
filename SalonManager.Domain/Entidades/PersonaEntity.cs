@@ -22,5 +22,7 @@ namespace SalonManager.Domain.Entidades
 
         [Required(ErrorMessage = "El telefono es requerido")]
         public string Telefono { get; set; }
+
+        public UsuarioEntity Usuario { get; set; }
     }
 }
