@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SalonManager.Domain.Enums
 {
-    internal class EstadosTurnoEnum
+
+    public enum EstadosTurnoEnum
     {
+        Reservado = 0,
+        Realizado = 1,
+        Reprogramado = 2,
+        Cancelado = 3,
+        
     }
 }

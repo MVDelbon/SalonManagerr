@@ -10,7 +10,7 @@ namespace SalonManager.Domain.Entidades
     public class PersonaEntity : BaseEntity
     {
         [Required(ErrorMessage = "El nombre es requerido")]
-        [StringLength(100, ErrorMessage = "CustomerName cannot be longer than 100 characters")]
+        [MaxLength(30, ErrorMessage = "El nombre no puede tener mas de 30 caracteres")]
         public string Nombre { get; set; }
 
         public string Direccion { get; set; }
