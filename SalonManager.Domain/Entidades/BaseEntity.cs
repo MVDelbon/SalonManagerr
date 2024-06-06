@@ -9,6 +9,7 @@ namespace SalonManager.Domain.Entidades
     public abstract class BaseEntity
     {
         public int Id { get; set; } 
+        // dejo un comentario aca
 
         public DateTime FechaRegsitro { get; set; }
 
