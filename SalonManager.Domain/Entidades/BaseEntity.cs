@@ -10,6 +10,7 @@ namespace SalonManager.Domain.Entidades
     {
         public int Id { get; set; } 
         // dejo un comentario aca
+        // dejo OTRO comentario, mira bien acá
 
         public DateTime FechaRegsitro { get; set; }
 
