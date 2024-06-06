@@ -15,6 +15,7 @@ namespace SalonManager.Domain.Entidades
 
         public string Direccion { get; set; }
 
+
         [Required(ErrorMessage = "El email es requerido")]
         [EmailAddress(ErrorMessage = "Email invalido")]
         public string Email { get; set; }
