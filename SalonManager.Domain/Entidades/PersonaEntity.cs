@@ -9,6 +9,16 @@ namespace SalonManager.Domain.Entidades
 {
     public class PersonaEntity : BaseEntity
     {
+        public PersonaEntity(string nombre, string direccion, string email, string telefono)
+        {
+            //TODO agregar validaciones a estas propiedades
+            //TODO Ver excepciones personalizadas
+            Nombre = nombre;
+            Direccion = direccion;
+            Email = email;
+            Telefono = telefono;
+        }
+
         [Required(ErrorMessage = "El nombre es requerido")]
         [MaxLength(30, ErrorMessage = "El nombre no puede tener mas de 30 caracteres")]
         public string Nombre { get; protected set; }

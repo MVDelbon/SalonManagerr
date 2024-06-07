@@ -9,6 +9,12 @@ namespace SalonManager.Domain.Entidades
 {
     public class ClienteEntity : PersonaEntity
     {
+        public ClienteEntity(string apellido, string nombre, string direccion, string email, string telefono) 
+            : base(nombre, direccion, email, telefono)
+        {
+            Apellido = apellido;
+        }
+
         [Required(ErrorMessage = "El apellido es requerido")]
         [MaxLength(30, ErrorMessage = "El apellido no puede tener mas de 30 caracteres")]
         public string Apellido { get; set; }
