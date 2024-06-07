@@ -10,18 +10,43 @@ namespace SalonManager.Domain.Entidades
 {
     public class TurnoEntity : BaseEntity
     {
-        public string Descripcion { get; set; }
+        public TurnoEntity(DateTime fechaTurno, int idCliente)
+        {
+            FechaRegsitro = DateTime.Now;
+            FechaModificacion = DateTime.Now;
+            Estado = EstadosTurnoEnum.Reservado;
+
+            if (fechaTurno >= DateTime.Now)
+            {
+                Fecha = fechaTurno;
+            }
+            else
+            {
+                throw new Exception("Fecha de turno invalida");
+            }
+
+            if (idCliente < 1)
+            {
+                throw new Exception("IdCliente menor que 1");
+            }
+            else
+            {
+                ClienteId = idCliente;
+            }
+
+        }
+        public string Descripcion { get; private set; }
 
         [Range(0, Int32.MaxValue)]
-        public int  Precio { get; set; }
+        public int Precio { get; private set; }
 
-        public DateTime Fecha { get; set; }
+        public DateTime Fecha { get; private set; }
 
-        public int ClienteId { get; set; }
+        public int ClienteId { get; private set; }
 
-        public ClienteEntity Cliente { get; set; }
+        public ClienteEntity Cliente { get; private set; }
 
-        public EstadosTurnoEnum Estado;
+        public EstadosTurnoEnum Estado { get; private set; }
 
     }
 }
