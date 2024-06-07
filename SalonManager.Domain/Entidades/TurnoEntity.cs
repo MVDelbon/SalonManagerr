@@ -10,6 +10,7 @@ namespace SalonManager.Domain.Entidades
 {
     public class TurnoEntity : BaseEntity
     {
+        // hola, soy un constructor :S
         public TurnoEntity(DateTime fechaTurno, int idCliente)
         {
             FechaRegsitro = DateTime.Now;
