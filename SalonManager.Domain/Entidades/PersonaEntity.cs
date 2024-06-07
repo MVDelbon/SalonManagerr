@@ -11,18 +11,18 @@ namespace SalonManager.Domain.Entidades
     {
         [Required(ErrorMessage = "El nombre es requerido")]
         [MaxLength(30, ErrorMessage = "El nombre no puede tener mas de 30 caracteres")]
-        public string Nombre { get; set; }
+        public string Nombre { get; protected set; }
 
-        public string Direccion { get; set; }
+        public string Direccion { get; protected set; }
 
 
         [Required(ErrorMessage = "El email es requerido")]
         [EmailAddress(ErrorMessage = "Email invalido")]
-        public string Email { get; set; }
+        public string Email { get; protected set; }
 
         [Required(ErrorMessage = "El telefono es requerido")]
-        public string Telefono { get; set; }
+        public string Telefono { get; protected set; }
 
-        public UsuarioEntity Usuario { get; set; }
+        public UsuarioEntity Usuario { get; protected set; }
     }
 }
